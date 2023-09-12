@@ -12,13 +12,25 @@ namespace consoleapp1
         {
             //ket szam bekerese es osszeadasa
             int szamA, szamB; // deklaralas
-            Console.WriteLine("Adj meg egy szamot: ");
-            szamA = int.Parse(Console.ReadLine());
-            Console.WriteLine("Adj meg egy masik szamot: ");
-            szamB = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("A két szám összege" +(szamA + szamB).ToString());
+            //bekérek egy szamot
+
+            szamA = szamotKer("Adj meg egy szamot: ");
+
+
+            //bekérek egy szamot
+            szamB = szamotKer("Adj meg egy masik szamot: ");
+
+            Console.Write("A két szám összege: " +(szamA + szamB).ToString());
             Console.ReadLine();
+        }
+
+        private static int szamotKer(string szöveg)
+        {
+            int bekertSzam;
+            Console.Write("Kérek egy szamot: ");
+            bekertSzam = int.Parse(Console.ReadLine());
+            return bekertSzam;
         }
     }
 }
